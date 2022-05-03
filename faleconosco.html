@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Fale Conosco</title> <!--title altera o título do navegador, nome do guia-->
+    <link rel="stylesheet" type="text/css" href="css/style.css"> <!--TAG para importar a folha de estilo criada em css de tipo text-->
+    <meta charset="utf-8" /> <!--para corrigir problemas com codificação de caracteres-->
+</head>
+
+<body>
+
+    <header> 
+        <div class="barra_superior"> <!--criada uma classe para dar estilo a esse elemento-->
+            <div class="container">
+                Horário de abertura: 9:00 - 18:00h
+            </div>          
+        </div>
+        <div class="container"> <!--aqui estou colocando todos os elementos dessa div sob configuração visual css criada para a class container em style.css. Dessa forma, logo e menu estão alinhadas com o texto do cabeçalho-->
+            <img class="logo" alt="Logo da empresa"  title="Aqui é apresentado a logo da empresa XYZ" src="img/LogoEmpresa.jpg"/> <!-- o img é para ser inserido uma imagem. O atributo alt é um texto alternativo para quando houevr erro de carregamento de imagem, sendo descrito o que seria  a imagem. Usada vomo alternativa também para pessoa com necessidades especiais-->
+            <nav > <!--navegação, menu-->                 
+                <a href="Index.html">Página Inicial</a> | 
+                <a href="index.html#marcas">Marcas</a> |
+                <a title="Vai para a página de fale conosco" href="faleconosco.html">Fale Conosco</a> |
+                <a class="btn_destaque" href="ondeEstamos.html">Onde Estamos</a>
+            </nav> 
+        </div>       
+    </header>
+
+    <br class="clearfix"/> <!--corrige os ekementos flutuantes-->
+    <section class="sec_fale">
+        <div class="container">
+        <div class="metade">
+            <!-- method: - GET: dados passados pela URL; - POST: dados são passados pela requisição
+            Tem outro atributo de form que não foi colocado, que é o action. Nele nós especificamos para onde o formulário será enviado. Se não informa, ele envia para a própria página
+            Caso os dados enviados em action precisarem ser armazenados, ia entra o back-End, dizendo como será salva tal informação
+            -->
+            <form name="form_contato" enctype="application/x-www-form-urlencoded" method="POST" action="">
+                <!-- a tag label é recomendada sempre que você for descrever o nome de um campo. O input é a entrada desse campo, que possui vários tipos-->
+                <label for="NomeCompleto" >Nome</label> <!--tendo o id do input, você pode colocá-lo no atributo for, assim, quando for no campo nome, ele já vai puxar automatico para você digitar seu nome-->
+                <input id="NomeCompleto" type="text" name="Nome_Completo" placeholder="Digite seu nome completo"/> <!-- com type text o campo Nome vai ter uma caixa de texto para ser digitado o nome do usuário
+                id sendo o identificador; atributo name usado para que quando os dados forem enviados, alguém pegue esses dados com os valores vinculados ao nome. Só assim será enviado ao servidor
+                o atributo placeholder é uma marca d'água, ex.: digite seu nome, mas que será apagado automaticamente quando você começar a escrever-->
+                <br/>
+
+                <label for="Email" >Email</label>  
+                <input id="Email" type="text" name="Email" placeholder="Digite seu email"/>
+                <br/>
+
+                <label for="Telefone" >Telefone</label>  
+                <input id="Telefone" type="text" name="Telefone" placeholder="Digite seu telefone"/> <!--tem a opção de type telefone, mas só funciona no safari-->
+                <br/>
+                
+                <label for="Mensagem">Mensagem</label>
+                <textarea name="Mensagem"></textarea> <!-- essa tag é paraecida com o atributo type text, mas aqui você pode escrever diversas palavras e pode saltar linhas-->
+                <br/>
+                <span class="texto"></span>
+                <br/>
+
+                <input type="submit" /> <!-- o tipo typo submit é para enviar o formulário para alguma página, que pode ser especificada com action. O padrão é ser criado o ícone "enviar", mas você pode padronizar com value-->
+                
+            </form>
+        </div>
+        </div>
+    <div class="metade">
+        <div>
+                <strong>Redes Sociais</strong>
+            <br />
+                <a href="#"><img alt="Link para Facebook" src="img/facebook.jpg" /></a>
+                <a href="#"><img alt="Link para Twitetr" src="img/twitter.png" /></a>
+                <a href="#"><img alt="Link para Instagran" src="img/instagran.png" /></a>
+            <br/>
+            <br/>
+                <strong>Telefone:</strong> (61) 3333-3333. 
+            <br/>         
+        </div>
+        <br/>
+        <address> <!--é uma tag importante caso o site estiver vinculado a alguma empresa, pois é um dado importante para o google-->
+            Brasil, DF
+            <br/>
+            CEP: 72000-000
+            <br/>
+            QR 400 Conjunto 01
+            <br/>
+            Casa nº20, Samambaia.
+        </address>      
+    </div>
+    </section>
+
+    <br class="clearfix"/> <!--no momento essa parte está flutuando-->
+    <footer>
+        <div class="container">
+            <div class="um_terco">
+                    <div class="container_logo">
+                        <img class="logo" alt="Logo da empresa"  title="Aqui é apresentado a logo da empresa XYZ" src="img/LogoEmpresa.jpg"/>
+                    </div>
+                <p>
+                    Nós oferecemos um serviço completo para o melhor conforto da sua visão
+                </p>
+                    <div class="container_logo">
+                        <a href="#"><img alt="Link para Facebook" src="img/facebook.jpg" /></a>
+                        <a href="#"><img alt="Link para Twitetr" src="img/twitter.png" /></a>
+                        <a href="#"><img alt="Link para Instagran" src="img/instagran.png" /></a>
+                    </div>
+            </div>                     
+        </div>  
+
+        <div class="um_terco">
+            <div class="margem_esquerda"> <!--com essa classe, eu estou colocando uma margem de 30px entre os elementos dessa div co sua esquerda, que no caso é a loga da empresa-->
+                <h3>Links</h3> <!--com o h eu digo que é um título-->
+            
+                <a alt="Vai para a página inicial do site" href="Index.html">Início</a> <br/>
+                <a alt="Vai para a lista de marcas que trabalhamos" href="index.html#marcas" >Marcas</a><br/> <!--o link do tipo âncora leva para a mesma página que se está, mas para um ponto específico. A gente identifica para onde esse link vai apontar-->
+                <a title="Vai para a página de fale conosco" href="faleconosco.html">Fale Conosco</a> <br/>
+                <a title="Vai para a página de Onde estamos" href="ondeEstamos.html">Onde Estamos</a> <br/>
+            
+            </div>
+        </div>
+        <div class="um_terco">  
+            <div class="margem_esquerda">
+                <h3>Contato</h3>
+                <p> 
+                    <strong>Endereço:</strong> Rua X, endereço Y, Avenida Z. Cidade, UF, 72.000-000
+                </p>
+                <p>  
+                    <strong>Telefone:</strong> <a href="tel: 6133333333">(61) 3333-3333</a> <!--esse link tel, quando se acessa o site pelo celular, ao apertar no número, ele já puxa para a chamada-->
+                </p>
+                <p>
+                    <strong>Email:</strong><a href="mailto: otica@otica.com.br "> otica@otica.com.br</a> <!--o link mailto: faz com que puxe automaticamente para envio para esse email-->
+                </p>
+            </div>                     
+        </div>
+    
+        <br class="clearfix" /> <!--regula a flutuação dos elementos-->
+        <div class="direitos_reservados">  <!-- usada div aqui para que haja cor no fundo dessa parte do cabeçalho-->
+            Todos os direitos reservador () 2021. <a href="termosDeUso.html">Termos de Uso </a> e <a href="politicaDePrivacidade.html">Política de privacidade</a>   
+        </div>
+    </footer>
+
+
+    <script type="text/javascript" src="js/script.js"> // colocando o que foi criado no arquivo script.js aqui
+
+    </script>
+</body>
+</html>

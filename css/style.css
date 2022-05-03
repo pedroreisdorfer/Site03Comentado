@@ -1,0 +1,321 @@
+
+@font-face {
+    font-family: "Florentia"; /* nome que vamos para a fonte*/
+    src: url("fonts/Florentia-Thin-trial.ttf") /* caminho até nossa fonte*/
+}
+@font-face {
+    font-family: "Raleway";
+    src: url("fonts/Raleway-Regular.ttf");
+}
+
+.clearfix {
+    clear: both; /* limpa ambos. Limpa tanto os elementos que podem estar flutuando acima ou abaixo da nossa tag*/
+}
+
+body{
+    margin: 0px; /* deixa as bordas do corpo da página com zero, ou seja, sem borda*/
+    font-family: "Raleway", "Florentia", "Arial", sans-serif; 
+
+}
+
+textarea, input {
+    font-family: "Raleway", "Florentia", "Arial", sans-serif; 
+}
+
+.barra_superior {
+    border-bottom: 1px solid rgb(204, 204, 204); /* aqui foi criada uma borda com de 1pix, linha do tipo solid e de cor cinza bem claro*/
+    color: rgb(187,187,187); /* aqui está sendo definida a cor da letra*/
+    padding-top: 10px; /*  ajusta as margens da borda até primeiro texto do cabeçalho*/
+    padding-bottom: 10px; /*  ajusta margem da borda do cabeçalho até primeiro texto do conteúdo principal*/
+    font-size: 14px;
+}
+
+.container {
+    max-width: 960px; /* se coloca o max-width para se que quando acessado em outro aparelho tecnologico, não tenha que colocar para o lado. 960px é mais voltado para tela de notebook*/
+    width: 100%; /* trabalha dai com 100% de largura, exceto quando ultrapassar o 960px*/ 
+    margin: 0 auto; /* técnica para deixar centralizado*/
+    
+} /* um exemplo de layout ideal para vários dispositivos*/
+
+nav { /* configura a parte de nav, no caso, "Pagina Inicial | Produtos e Marcas*/
+    color: rgb(187,187,187);
+    font-size: 15px;
+    float: right; /* elementos flutuam para a direita*/
+    margin-top: 50px; /* margem para a parte externa*/
+}
+
+nav a{ /* com o "a" depois do nav, estamos dizendo que isso é para o link de nav*/
+    color: rgb(187,187,187);
+    text-decoration: none; /* assim nós tiramos aquela linha abaixo das palavras que são link*/
+}
+
+nav a.btn_destaque {
+    margin-left: 25px;
+}
+
+.btn_destaque { /* efeito para o botão "Onde estamos*/
+    background-color: rgb(255,77,77);
+    color: white; /* definida a cor da letra*/
+    padding: 12px 40px; /* margem do texto até a borda do botão. Sendo 12 superior e inferior e 50 direita e esquerda*/
+    border-radius: 3px; /* aqui quanto mais px vc colocar, mais arredonda a borda fica*/
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.sec01 {
+    height: 550px;
+    color: white;
+    background-image: url(../img/Home.png); /* aqui estamos colocando uma imagemd e fundo. Já que não estou na pasta raiz, preciso voltar, ai uso .., e depois sigo o caminho das pastas até localizar minha imagem*/
+    background-repeat: no-repeat; /* se existe uma repetição de uma parte do início da image no final, a fim de completar tamanho da página, eu elimino com essa função*/
+    background-position: center; /* para centralizar imagem*/
+    background-color: rgb(164,164,164);
+    
+}
+
+.sec01 p.titulo {
+    font-size: 48px;
+    padding-top: 100px;
+    padding-bottom: 5px;
+}
+
+.sec01 p { /* aqui está sendo configurado o parágrafo armações e lentes*/
+    font-size: 24px;
+    padding-bottom: 30px; /* margem até a parte de baixo*/
+    line-height: 120%; /* aumenta espaçamento entre linhas*/
+}
+
+.sec02 {
+    border-bottom: 1px solid rgb(204, 204, 204); /* foi escolhido o solid, mas tem outras opções. Procura-se por border-style*/
+}
+
+.sec02 p {
+    font-size: 28px;
+    text-align: center; /* deixa o texto centralizado. Tipo as opções do word: center, inherit, justify, left, right*/
+}
+
+.sec02 img { /* ou seja, todas as imagens de sec02*/
+    width:100%; /* dimensiona a imagem de acordo com o tamanho da tela*/
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.sec03 {
+    background-color: rgb(239,243,249);
+    height: 664px;
+    background-image: url(../img/Home2.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.sec03 p {
+    font-size: 54px;
+    line-height: 120%;
+    color: rgb(102, 102, 102);
+    padding-top: 100px; /* aqui estamos definindo que o parágrafo "Grande variedade de armações" deve ficar a 100px da borda*/ 
+    padding-bottom: 40px;
+}
+
+.largura35 { /* aqui se fala dos 35% do fundo da seção 3*/
+    width: 33%;
+    float: left;
+    background-color: rgb(239,243,249);
+    height: 664px;
+} /* aqui estou dizendo que a largura dessa parte da sessão ocupa 35% da página. Flutua pelo lado esquerdo, tem tal cor e tem o tamanho de 664px*/
+
+.direitos_reservados {
+    background-color: rgb(255,77,77);
+    color: white;
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    width: 100%;
+}
+
+.direitos_reservados a {
+    color: white;  
+}
+
+.um_terco {
+    width: 34%;
+    float: left; 
+    padding-top: 15px;
+    padding-bottom: 28px;  
+}
+
+.um_terco, .um_terco a{ /* assim eu consigo aplicar a cor que quero a mais de um elemento*/
+    color: rgb(136, 136, 136);
+}
+
+.um_terco .logo {
+    width: 100%; /* neste caso, a logo ocupa todo e espaço que largura possível, seus 100% dos 33%*/
+}
+
+.um_terco img {
+    width: 35px;
+}
+
+.um_terco a {
+    text-decoration: none;
+}
+
+.margem_esquerda{ /* aqui estou colocando uma margem de 30px a esquerda dessa estrutura*/
+    margin-left: 30px;
+    
+}
+
+.sec_fale, .sec_onde {
+    height: 500px;
+    background-color: #FAFAFA; /* DEIXA CINZA QUASE BRANCO*/
+}
+
+.sec_fale .metade {
+    padding-top: 100px;
+}
+
+.metade { /* dividindo 50% para cada uma das div dessa classe*/
+    width: 50%;
+    float: left;
+    line-height: 150%; /* aqui deixa a parte onde se encontra telefone etc com espaçamento de 150%*/
+    color: rgb(120,120,120);
+}
+
+.metade div, .metade address {
+    margin-left: 20px;
+}
+
+.metade form {
+    line-height: 250%; /* aqui eu defino o espaçamento entre as caixas de texto do formulário*/
+    
+}
+
+.metade form input[type=text], textarea, .modal input[type=text] { /* no caso, a caixa de todos elementos do form: nome, email e telefone; Dentro das chaves eu delimito o tipo que vai ser mudado*/
+    border: none;
+    border-bottom: 1px  solid lightgrey;
+    width: 63%;
+    background-color: #FAFAFA;
+    padding: 10px; /* deixando a caixa de digitação para o usuário mais robusta. Cria uma distância entre os textos */
+}
+
+.metade textarea {
+    min-height: 100px; /* difinindo a altura mínina da caixa de texto da mensagem*/
+}
+
+.metade input[type=submit] { /* trabalhando com o botão "enviar" */
+    float: right;
+    
+}
+
+.metade img {
+    width: 35px;
+}
+
+.metade label{
+    width: 30%;
+    display: inline-block; /* display: block meio que transforma nossa label em uma div, transformando todos os elementos em um bloco. O Inline-block tira a quebra de linha*/
+    vertical-align: top; /*  todos os elementos ficam alinhados na parte superior*/
+}
+
+.margem_esquerda a {
+    text-decoration: none;
+    
+}
+
+
+/* Confoguração para Tablets e Computadores*/
+@media screen and (min-width: 481px) and (max-width: 1366px) { /* ficando só de exemplo, não sendo usada nesse projeto*/
+
+}
+
+/* smarthphones */
+/* configuração para quando a tela for pequena, quando chegar a menos que 480px*/
+@media screen and (max-width: 480px){ 
+    .barra_superior .container { 
+        margin-left: 10px;
+    }  
+    .logo {
+        width: 100%; /* nesse caso, se a for menos que 560px, a logo preenche toda a tela*/
+        
+    }
+    nav {
+        float: none;
+        margin-left: 10px;
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    .sec01 p, .sec01 .btn_destaque {
+        margin-left: 20px;
+    }
+    .sec03 {
+        background-image: none;
+        height: 450px;
+        text-align: center;
+        border-bottom: 1px solid rgb(204, 204, 204);
+    }
+    .sec03 p{
+        padding-top: 10px;
+    }
+    .largura35 {
+        width: 100%;
+        height: 400px;       
+    }
+    .um_terco {
+        width: 100%;
+        border-bottom: 1px solid rgb(204, 204, 204);
+        padding-left: 20px;
+    }
+    .margem_esquerda {
+        margin-left: 0px; /* aqui é zero, pq gora tudo o que envolve um_terco já está com amrgem de 20px a esquerda, ou seja, link com página reduzida já está também, ai a classe que é só dele precisa ser modificada para ficar sem margem*/
+        
+    }
+    .um_terco .logo{
+        width: 50%;
+    }
+    .container_logo {
+        text-align: center;
+    }
+} /* colocado aqui para ter preferência, pois é o último a ser declarado*/
+
+.modal {
+    display: none; /* assim o modal fica desaparecido da tela*/
+    position: fixed; /* com a "position: absolute" nós conseguimos colocar nossa div em qualquer lugar da nossa página. O fixed funciona da mesma forma, mas ele fica fixo, ou seja, mesmo rolando a tela para baixo, o modal ficará acompanhando na posição dele */
+    width: 400px;
+    min-height: 200px;
+    background-color: white;
+    top: 50%; /* vai sempre estar a 50% do topo da tela. Significa que a partir do meio vai estar o modal*/
+    margin-top: -100px; /* já que a altura é de 200px, vou subtrair 100px. Ai a margem em relação ao topo será a metade da altura do modal*/
+    left: 50%; /* o modal começa a partir de 50% da  esquerda*/
+    margin-left: -200px; /* subtrai a metade da largura para colocá-lo no meio*/
+    padding: 20px; /* margem de dentro do modal*/
+    border-radius: 4px;
+}
+
+.modal input[type=text] {
+    width: 95%;
+}
+
+.modal a {
+    float: right; /* flutuo o X para a direita*/
+    font-size: 24px;
+    text-decoration: none;
+    color:black;
+    cursor: pointer; /* criação a mãozinha quando estiveros em cima do link X para fechar o modal. Foi criada essa mãozinha, pois foi optado para o link não enviar para nenhum lugar da página ao ser fechado o modal*/
+}
+
+span.nao_valido {
+    color: red;
+    display: none;
+}
+
+input.nao_valido, textarea.nao_valido {
+    border-bottom: 1px solid red !important; /* cria uma linha vermelha na caixinha onde se escreve o email após ser colocado um email inválido*/
+}
+
+.texto {
+    color: gray;
+    float: right;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+
